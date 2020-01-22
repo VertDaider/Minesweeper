@@ -1,12 +1,13 @@
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import javax.swing.*;
-import javax.swing.filechooser.*;
 import javax.swing.filechooser.FileFilter;
-import java.util.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.*;
+import java.util.Arrays;
+import java.util.Random;
 
 public class GameOfLife extends JFrame {
 
@@ -15,7 +16,7 @@ public class GameOfLife extends JFrame {
     final int LIFE_SIZE = 50;
     final int POINT_RADIUS = 10;
     final int FIELD_SIZE = LIFE_SIZE * POINT_RADIUS + 7;
-    final int BTN_PANEL_HEIGHT = 58+4;
+    final int BTN_PANEL_HEIGHT = 58 + 4;
     final int START_LOCATION = 200;
     boolean[][] lifeGeneration = new boolean[LIFE_SIZE][LIFE_SIZE];
     boolean[][] nextGeneration = new boolean[LIFE_SIZE][LIFE_SIZE];
@@ -87,6 +88,7 @@ public class GameOfLife extends JFrame {
                 public String getDescription() {
                     return "Saved GameOfLife files (*" + SAVE_FILE_EXT + ")";
                 }
+
                 public boolean accept(File f) {
                     if (f.isDirectory()) {
                         return true;
@@ -103,7 +105,7 @@ public class GameOfLife extends JFrame {
                     ObjectInputStream is = new ObjectInputStream(fileIn);
                     lifeGeneration = (boolean[][]) is.readObject();
                     canvasPanel.repaint();
-                } catch(Exception ex) {
+                } catch (Exception ex) {
                     ex.printStackTrace();
                     JOptionPane.showMessageDialog(frame, "Incorrect file format.", "Error openning file", JOptionPane.ERROR_MESSAGE);
                 }
@@ -115,20 +117,18 @@ public class GameOfLife extends JFrame {
         saveButton.setIcon(icoSave);
         saveButton.setPreferredSize(btnDimension);
         saveButton.setToolTipText("Save field as file");
-        saveButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                JFileChooser save = new JFileChooser(".");
-                save.setFileSelectionMode(JFileChooser.FILES_ONLY);
-                //save.setFileFilter(new FileNameExtensionFilter("Game Of Life files (*." + SAVE_FILE_EXT + ")", SAVE_FILE_EXT)); // for compatibility with Java 1.5
-                int result = save.showSaveDialog(frame);
-                if (result == JFileChooser.APPROVE_OPTION) {
-                    try {
-                        FileOutputStream fileStream = new FileOutputStream(new File(save.getSelectedFile().getAbsolutePath() + (save.getSelectedFile().getAbsolutePath().endsWith(SAVE_FILE_EXT)?"":SAVE_FILE_EXT)));
-                        ObjectOutputStream os = new ObjectOutputStream(fileStream);
-                        os.writeObject(lifeGeneration);
-                    } catch(Exception ex) {
-                        ex.printStackTrace();
-                    }
+        saveButton.addActionListener(e -> {
+            JFileChooser save = new JFileChooser(".");
+            save.setFileSelectionMode(JFileChooser.FILES_ONLY);
+            //save.setFileFilter(new FileNameExtensionFilter("Game Of Life files (*." + SAVE_FILE_EXT + ")", SAVE_FILE_EXT)); // for compatibility with Java 1.5
+            int result = save.showSaveDialog(frame);
+            if (result == JFileChooser.APPROVE_OPTION) {
+                try {
+                    FileOutputStream fileStream = new FileOutputStream(new File(save.getSelectedFile().getAbsolutePath() + (save.getSelectedFile().getAbsolutePath().endsWith(SAVE_FILE_EXT) ? "" : SAVE_FILE_EXT)));
+                    ObjectOutputStream os = new ObjectOutputStream(fileStream);
+                    os.writeObject(lifeGeneration);
+                } catch (Exception ex) {
+                    ex.printStackTrace();
                 }
             }
         });
@@ -138,11 +138,9 @@ public class GameOfLife extends JFrame {
         stepButton.setIcon(icoStep);
         stepButton.setPreferredSize(btnDimension);
         stepButton.setToolTipText("Show next generation");
-        stepButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                processOfLife();
-                canvasPanel.repaint();
-            }
+        stepButton.addActionListener(e -> {
+            processOfLife();
+            canvasPanel.repaint();
         });
 
         // generation after generation without stopping
@@ -150,12 +148,10 @@ public class GameOfLife extends JFrame {
         goButton.setIcon(icoGo);
         goButton.setPreferredSize(new Dimension(34, 30));
         goButton.setToolTipText("Go/Stop generation after generation");
-        goButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                goNextGeneration = !goNextGeneration;
-                goButton.setIcon(goNextGeneration? icoStop : icoGo);
-                goButton.setFocusable(false); // as an example to remove the frame
-            }
+        goButton.addActionListener(e -> {
+            goNextGeneration = !goNextGeneration;
+            goButton.setIcon(goNextGeneration ? icoStop : icoGo);
+            goButton.setFocusable(false); // as an example to remove the frame
         });
 
         // show change of generation faster
@@ -163,34 +159,24 @@ public class GameOfLife extends JFrame {
         fasterButton.setIcon(icoFaster);
         fasterButton.setPreferredSize(btnDimension);
         fasterButton.setToolTipText("Faster");
-        fasterButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                showDelay -= (showDelay - showDelayStep == 0) ? 0 : showDelayStep;
-            }
-        });
+        fasterButton.addActionListener(e -> showDelay -= (showDelay - showDelayStep == 0) ? 0 : showDelayStep);
 
         // show change of generation slower
         JButton slowerButton = new JButton();
         slowerButton.setIcon(icoSlower);
         slowerButton.setPreferredSize(btnDimension);
         slowerButton.setToolTipText("Slower");
-        slowerButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                showDelay += showDelay;
-            }
-        });
+        slowerButton.addActionListener(e -> showDelay += showDelay);
 
         // turn on/off colors
         final JButton colorButton = new JButton();
         colorButton.setIcon(icoColor);
         colorButton.setPreferredSize(btnDimension);
         colorButton.setToolTipText("Turn on/off colors");
-        colorButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                useColors = !useColors;
-                colorButton.setIcon(useColors? icoNoColor : icoColor);
-                canvasPanel.repaint();
-            }
+        colorButton.addActionListener(e -> {
+            useColors = !useColors;
+            colorButton.setIcon(useColors ? icoNoColor : icoColor);
+            canvasPanel.repaint();
         });
 
         // to show/hide the grid
@@ -206,13 +192,13 @@ public class GameOfLife extends JFrame {
         });
 
         canvasPanel = new Canvas();
-        canvasPanel.setBackground(Color.white);
+        canvasPanel.setBackground(Color.BLACK);
         canvasPanel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseReleased(MouseEvent e) {
                 super.mouseReleased(e);
-                int x = e.getX()/POINT_RADIUS;
-                int y = e.getY()/POINT_RADIUS;
+                int x = e.getX() / POINT_RADIUS;
+                int y = e.getY() / POINT_RADIUS;
                 lifeGeneration[x][y] = !lifeGeneration[x][y];
                 canvasPanel.repaint();
             }
@@ -243,7 +229,9 @@ public class GameOfLife extends JFrame {
                 canvasPanel.repaint();
                 try {
                     Thread.sleep(showDelay);
-                } catch (InterruptedException e) { e.printStackTrace(); }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
@@ -275,7 +263,9 @@ public class GameOfLife extends JFrame {
                 count += (lifeGeneration[nX][nY]) ? 1 : 0;
             }
         }
-        if (lifeGeneration[x][y]) { count--; }
+        if (lifeGeneration[x][y]) {
+            count--;
+        }
         return count;
     }
 
@@ -286,15 +276,15 @@ public class GameOfLife extends JFrame {
                 int count = countNeighbors(x, y);
                 nextGeneration[x][y] = lifeGeneration[x][y];
                 // if are 3 live neighbors around empty cells - the cell becomes alive
-                nextGeneration[x][y] = (count == 3) ? true : nextGeneration[x][y];
+                nextGeneration[x][y] = (count == 3) || nextGeneration[x][y];
                 // if cell has less than 2 or greater than 3 neighbors - it will be die
-                nextGeneration[x][y] = ((count < 2) || (count > 3)) ? false : nextGeneration[x][y];
+                nextGeneration[x][y] = ((count >= 2) && (count <= 3)) && nextGeneration[x][y];
             }
         }
         // swap generations
-        tmp		= nextGeneration;
-        nextGeneration	= lifeGeneration;
-        lifeGeneration	= tmp;
+        tmp = nextGeneration;
+        nextGeneration = lifeGeneration;
+        lifeGeneration = tmp;
 
         countGeneration++;
     }
@@ -309,24 +299,24 @@ public class GameOfLife extends JFrame {
                     if (lifeGeneration[x][y]) {
                         if (useColors) {
                             int count = countNeighbors(x, y);
-                            g.setColor(((count < 2) || (count > 3))? Color.red : Color.blue);
+                            g.setColor(((count < 2) || (count > 3)) ? Color.MAGENTA: Color.ORANGE);
                         } else {
-                            g.setColor(Color.black);
+                            g.setColor(Color.WHITE);
                         }
-                        g.fillOval(x*POINT_RADIUS, y*POINT_RADIUS, POINT_RADIUS, POINT_RADIUS);
+                        g.fillOval(x * POINT_RADIUS, y * POINT_RADIUS, POINT_RADIUS, POINT_RADIUS);
                     } else {
                         if (useColors) {
                             int count = countNeighbors(x, y);
                             if (count == 3) {
                                 g.setColor(new Color(225, 255, 235));
-                                g.fillOval(x*POINT_RADIUS, y*POINT_RADIUS, POINT_RADIUS, POINT_RADIUS);
+                                g.fillOval(x * POINT_RADIUS, y * POINT_RADIUS, POINT_RADIUS, POINT_RADIUS);
                             }
                         }
                     }
                     if (showGrid) {
                         g.setColor(Color.lightGray);
-                        g.drawLine((x+1)*POINT_RADIUS-1, (y+1)*POINT_RADIUS, (x+1)*POINT_RADIUS+1, (y+1)*POINT_RADIUS);
-                        g.drawLine((x+1)*POINT_RADIUS, (y+1)*POINT_RADIUS-1, (x+1)*POINT_RADIUS, (y+1)*POINT_RADIUS+1);
+                        g.drawLine((x + 1) * POINT_RADIUS - 1, (y + 1) * POINT_RADIUS, (x + 1) * POINT_RADIUS + 1, (y + 1) * POINT_RADIUS);
+                        g.drawLine((x + 1) * POINT_RADIUS, (y + 1) * POINT_RADIUS - 1, (x + 1) * POINT_RADIUS, (y + 1) * POINT_RADIUS + 1);
                     }
                 }
             }
