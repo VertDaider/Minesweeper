@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3d398be-c9eb-4633-abed-96ba760270e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TanksWebinar/TanksWebinar.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/display/Display.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TicTacToe3D/TicTacToe3D.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TicTacToe3D/src/TicTacToe3D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Optical illusion/Optical illusion.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Optical illusion/src/ru/serioussem/display/Display.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Optical illusion/src/ru/serioussem/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Life/src/GameOfLife.java" beforeDir="false" afterPath="$PROJECT_DIR$/Life/src/GameOfLife.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/display/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/display/Display.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +40,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="GameOfLife" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GameOfLife" />
       <module name="Life" />
@@ -54,6 +51,19 @@
     <configuration name="JavaSweeper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JavaSweeper" />
       <module name="MinesweeperWebinar" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.serioussem.main.Main" />
+      <module name="Optical illusion" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.serioussem.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -71,19 +81,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpaceInvaders" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.serioussem.SpaceInvaders" />
-      <module name="SpaceInvaders" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.serioussem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TicTacToe3D" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TicTacToe3D" />
       <module name="TicTacToe3D" />
@@ -93,11 +90,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.GameOfLife" />
         <item itemvalue="Application.TicTacToe3D" />
         <item itemvalue="Application.JavaSweeper" />
-        <item itemvalue="Application.SpaceInvaders" />
       </list>
     </recent_temporary>
   </component>
@@ -134,22 +131,22 @@
       <screen x="0" y="0" width="1600" height="869" />
     </state>
     <state x="583" y="193" width="428" height="484" key="FileChooserDialogImpl/0.0.1600.869@0.0.1600.869" timestamp="1579519270046" />
-    <state width="920" height="48" key="GridCell.Tab.0.bottom" timestamp="1579698256714">
+    <state width="1554" height="48" key="GridCell.Tab.0.bottom" timestamp="1579714527901">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="920" height="48" key="GridCell.Tab.0.bottom/0.0.1600.869@0.0.1600.869" timestamp="1579698256714" />
-    <state width="920" height="48" key="GridCell.Tab.0.center" timestamp="1579698256713">
+    <state width="1554" height="48" key="GridCell.Tab.0.bottom/0.0.1600.869@0.0.1600.869" timestamp="1579714527901" />
+    <state width="1554" height="48" key="GridCell.Tab.0.center" timestamp="1579714527901">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="920" height="48" key="GridCell.Tab.0.center/0.0.1600.869@0.0.1600.869" timestamp="1579698256713" />
-    <state width="920" height="48" key="GridCell.Tab.0.left" timestamp="1579698256713">
+    <state width="1554" height="48" key="GridCell.Tab.0.center/0.0.1600.869@0.0.1600.869" timestamp="1579714527901" />
+    <state width="1554" height="48" key="GridCell.Tab.0.left" timestamp="1579714527901">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="920" height="48" key="GridCell.Tab.0.left/0.0.1600.869@0.0.1600.869" timestamp="1579698256713" />
-    <state width="920" height="48" key="GridCell.Tab.0.right" timestamp="1579698256713">
+    <state width="1554" height="48" key="GridCell.Tab.0.left/0.0.1600.869@0.0.1600.869" timestamp="1579714527901" />
+    <state width="1554" height="48" key="GridCell.Tab.0.right" timestamp="1579714527901">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="920" height="48" key="GridCell.Tab.0.right/0.0.1600.869@0.0.1600.869" timestamp="1579698256713" />
+    <state width="1554" height="48" key="GridCell.Tab.0.right/0.0.1600.869@0.0.1600.869" timestamp="1579714527901" />
     <state x="493" y="263" key="com.intellij.ide.util.TipDialog" timestamp="1579671927352">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
@@ -158,9 +155,9 @@
       <screen x="0" y="0" width="1600" height="869" />
     </state>
     <state x="486" y="45" width="628" height="780" key="find.popup/0.0.1600.869@0.0.1600.869" timestamp="1579498024174" />
-    <state x="175" y="48" width="1243" height="775" key="new project wizard" timestamp="1579671974115">
+    <state x="175" y="48" width="1243" height="775" key="new project wizard" timestamp="1579709481317">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state x="175" y="48" width="1243" height="775" key="new project wizard/0.0.1600.869@0.0.1600.869" timestamp="1579671974115" />
+    <state x="175" y="48" width="1243" height="775" key="new project wizard/0.0.1600.869@0.0.1600.869" timestamp="1579709481317" />
   </component>
 </project>
