@@ -39,6 +39,7 @@ public abstract class Display {
         buffer = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
         bufferData = ((DataBufferInt) buffer.getRaster().getDataBuffer()).getData();
         bufferGraphics = buffer.getGraphics();
+        ((Graphics2D) bufferGraphics).setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         clearColor = _clearColor;
 
         created = true;
@@ -49,14 +50,14 @@ public abstract class Display {
     }
 
 
-    private static float delta = 2f;            //white
+    private static float delta = 1.3f;            //white
     private static float delta7 = 1.75f;       //orange
     private static float delta5 = -1.0f;        //green
     private static float delta6 = -0.5f;       //magenta
     private static float delta1 = 0.0f;         //blue
-    private static float delta2 = 0.25f;       //yellow
-    private static float delta4 = 0.5f;        //gray
-    private static float delta3 = 1.35f;            //cyan
+    private static float delta2 = 0.3f;       //yellow
+    private static float delta4 = 0.6f;        //gray
+    private static float delta3 = 1f;            //cyan
 
     private static int getStartX(int radius) {
         return (width - radius) / 2;
