@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3d398be-c9eb-4633-abed-96ba760270e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Optical illusion/Optical illusion.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Optical illusion/src/ru/serioussem/display/Display.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Optical illusion/src/ru/serioussem/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/IO/Input.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/utils/Time.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Optical illusion/src/ru/serioussem/display/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/Optical illusion/src/ru/serioussem/display/Display.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/display/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/display/Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +41,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="GameOfLife" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GameOfLife" />
       <module name="Life" />
@@ -90,8 +91,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.GameOfLife" />
         <item itemvalue="Application.TicTacToe3D" />
         <item itemvalue="Application.JavaSweeper" />
@@ -127,30 +128,38 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1040" y="159" width="378" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1580056665883">
+      <screen x="0" y="0" width="1600" height="869" />
+    </state>
+    <state x="1040" y="159" width="378" height="575" key="#com.intellij.ide.util.MemberChooser/0.0.1600.869@0.0.1600.869" timestamp="1580056665883" />
     <state x="583" y="193" width="428" height="484" key="FileChooserDialogImpl" timestamp="1579519270046">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
     <state x="583" y="193" width="428" height="484" key="FileChooserDialogImpl/0.0.1600.869@0.0.1600.869" timestamp="1579519270046" />
-    <state width="1554" height="48" key="GridCell.Tab.0.bottom" timestamp="1579714527901">
+    <state width="914" height="25" key="GridCell.Tab.0.bottom" timestamp="1580062394132">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="1554" height="48" key="GridCell.Tab.0.bottom/0.0.1600.869@0.0.1600.869" timestamp="1579714527901" />
-    <state width="1554" height="48" key="GridCell.Tab.0.center" timestamp="1579714527901">
+    <state width="914" height="25" key="GridCell.Tab.0.bottom/0.0.1600.869@0.0.1600.869" timestamp="1580062394132" />
+    <state width="914" height="25" key="GridCell.Tab.0.center" timestamp="1580062394131">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="1554" height="48" key="GridCell.Tab.0.center/0.0.1600.869@0.0.1600.869" timestamp="1579714527901" />
-    <state width="1554" height="48" key="GridCell.Tab.0.left" timestamp="1579714527901">
+    <state width="914" height="25" key="GridCell.Tab.0.center/0.0.1600.869@0.0.1600.869" timestamp="1580062394131" />
+    <state width="914" height="25" key="GridCell.Tab.0.left" timestamp="1580062394131">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="1554" height="48" key="GridCell.Tab.0.left/0.0.1600.869@0.0.1600.869" timestamp="1579714527901" />
-    <state width="1554" height="48" key="GridCell.Tab.0.right" timestamp="1579714527901">
+    <state width="914" height="25" key="GridCell.Tab.0.left/0.0.1600.869@0.0.1600.869" timestamp="1580062394131" />
+    <state width="914" height="25" key="GridCell.Tab.0.right" timestamp="1580062394131">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="1554" height="48" key="GridCell.Tab.0.right/0.0.1600.869@0.0.1600.869" timestamp="1579714527901" />
-    <state x="493" y="263" key="com.intellij.ide.util.TipDialog" timestamp="1579671927352">
+    <state width="914" height="25" key="GridCell.Tab.0.right/0.0.1600.869@0.0.1600.869" timestamp="1580062394131" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1580057646747">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state x="493" y="263" key="com.intellij.ide.util.TipDialog/0.0.1600.869@0.0.1600.869" timestamp="1579671927352" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1600.869@0.0.1600.869" timestamp="1580057646747" />
+    <state x="493" y="263" key="com.intellij.ide.util.TipDialog" timestamp="1580052071446">
+      <screen x="0" y="0" width="1600" height="869" />
+    </state>
+    <state x="493" y="263" key="com.intellij.ide.util.TipDialog/0.0.1600.869@0.0.1600.869" timestamp="1580052071446" />
     <state x="486" y="45" width="628" height="780" key="find.popup" timestamp="1579498024174">
       <screen x="0" y="0" width="1600" height="869" />
     </state>

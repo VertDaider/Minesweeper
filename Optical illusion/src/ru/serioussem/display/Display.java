@@ -49,14 +49,14 @@ public abstract class Display {
     }
 
 
-    private static float delta = 0.75f;            //white
-    private static float delta7 = 0.05f;       //orange
-    private static float delta5 = 0.25f;        //green
-    private static float delta6 = 0.325f;       //magenta
-    private static float delta1 = 0.5f;         //blue
-    private static float delta2 = 0.625f;       //yellow
-    private static float delta4 = 0.75f;        //gray
-    private static float delta3 = 1;            //cyan
+    private static float delta = 2f;            //white
+    private static float delta7 = 1.75f;       //orange
+    private static float delta5 = -1.0f;        //green
+    private static float delta6 = -0.5f;       //magenta
+    private static float delta1 = 0.0f;         //blue
+    private static float delta2 = 0.25f;       //yellow
+    private static float delta4 = 0.5f;        //gray
+    private static float delta3 = 1.35f;            //cyan
 
     private static int getStartX(int radius) {
         return (width - radius) / 2;
@@ -77,30 +77,37 @@ public abstract class Display {
         bufferGraphics.fillOval((int) (getStartX(radiusSmall) + (Math.sin(delta) * (300 - radiusSmall / 2))),
                 getStartY(radiusSmall), radiusSmall, radiusSmall);
         delta += 0.02f;
+
         bufferGraphics.setColor(Color.ORANGE);
         bufferGraphics.fillOval((int) (getStartX(radiusSmall) + (Math.sin(delta7) * 246)),
                 (int) (getStartY(radiusSmall) + (Math.sin(delta7) * 246) / -2), radiusSmall, radiusSmall);
         delta7 += 0.02f;
+
         bufferGraphics.setColor(Color.GREEN);
         bufferGraphics.fillOval((int) (getStartX(radiusSmall) + (- Math.sin(delta5) * 195)),
                 (int) (getStartY(radiusSmall) + (Math.sin(delta5) * 195)), radiusSmall, radiusSmall);
         delta5 += 0.02f;
+
         bufferGraphics.setColor(Color.MAGENTA);
         bufferGraphics.fillOval((int) (getStartX(radiusSmall) + (Math.sin(delta6) * 246) / -2),
                 (int) (getStartY(radiusSmall) + (Math.sin(delta6) * 246)), radiusSmall, radiusSmall);
         delta6 += 0.02f;
+
         bufferGraphics.setColor(Color.BLUE);
         bufferGraphics.fillOval(getStartX(radiusSmall),
                 (int) (getStartY(radiusSmall) + (Math.sin(delta1) * (300 - radiusSmall / 2))), radiusSmall, radiusSmall);
         delta1 += 0.02f;
+
         bufferGraphics.setColor(Color.YELLOW);
         bufferGraphics.fillOval((int) (getStartX(radiusSmall) + (Math.sin(delta2) * 246) / 2),
                 (int) (getStartY(radiusSmall) + (Math.sin(delta2) * 246)), radiusSmall, radiusSmall);
         delta2 += 0.02f;
+
         bufferGraphics.setColor(Color.GRAY);
         bufferGraphics.fillOval((int) (getStartX(radiusSmall) + (Math.sin(delta4) * 195)),
                 (int) (getStartY(radiusSmall) + (Math.sin(delta4) * 195)), radiusSmall, radiusSmall);
         delta4 += 0.02f;
+
         bufferGraphics.setColor(Color.CYAN);
         bufferGraphics.fillOval((int) (getStartX(radiusSmall) + (Math.sin(delta3) * 246)),
                 (int) (getStartY(radiusSmall) + (Math.sin(delta3) * 246) / 2), radiusSmall, radiusSmall);

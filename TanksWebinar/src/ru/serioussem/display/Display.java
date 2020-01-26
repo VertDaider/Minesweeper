@@ -2,6 +2,7 @@ package ru.serioussem.display;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
 import java.util.Arrays;
@@ -16,9 +17,9 @@ public abstract class Display {
     private static Graphics bufferGraphics;
     private static int clearColor;
 
+    private static BufferStrategy bufferStrategy;
 
-
-    public static void create(int width, int height, String title, int _clearColor) {
+    public static void create(int width, int height, String title, int _clearColor, int numBuffers) {
         if (created)
             return;
 
@@ -38,7 +39,11 @@ public abstract class Display {
         buffer = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
         bufferData = ((DataBufferInt) buffer.getRaster().getDataBuffer()).getData();
         bufferGraphics = buffer.getGraphics();
+        ((Graphics2D) bufferGraphics).setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         clearColor = _clearColor;
+
+        content.createBufferStrategy(numBuffers);
+        bufferStrategy = content.getBufferStrategy();
 
         created = true;
     }
@@ -47,17 +52,22 @@ public abstract class Display {
         Arrays.fill(bufferData, clearColor);
     }
 
-    //temp
-    private static float delta = 0;
-    // temp end
-    public  static void render () {
-        bufferGraphics.setColor(Color.BLUE);
-        bufferGraphics.fillOval((int)(350 + (Math.sin(delta) * 200)/ 2),(int)(250 + (Math.sin(delta) * 200)), 50, 50);
-        delta += 0.02f;
+    public static void swapBuffers() {
+        Graphics g = bufferStrategy.getDrawGraphics();
+        g.drawImage(buffer, 0, 0, null);
+        bufferStrategy.show();
     }
 
-    public static void swapBuffers() {
-        Graphics g = content.getGraphics();
-        g.drawImage(buffer,0,0,null);
+    public static Graphics2D getGraphics() {
+        return (Graphics2D) bufferGraphics;
+    }
+
+    public static void destroy() {
+        if (!created) return;
+        window.dispose();
+    }
+
+    public static void setTitle(String title){
+        window.setTitle(title);
     }
 }
