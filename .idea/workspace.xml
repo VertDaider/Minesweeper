@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3d398be-c9eb-4633-abed-96ba760270e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TanksWebinar/res/texture_atlas.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/graphics/Sprite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/graphics/SpriteSheet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/graphics/TextureAtlas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/utils/ResourceLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/Entity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/EntityType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Optical illusion/src/ru/serioussem/display/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/Optical illusion/src/ru/serioussem/display/Display.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanksWebinar/TanksWebinar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TanksWebinar/TanksWebinar.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/IO/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/IO/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/display/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/display/Display.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +16,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -133,30 +128,30 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1040" y="159" width="378" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1580056665883">
+    <state x="1040" y="159" width="378" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1580071220781">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state x="1040" y="159" width="378" height="575" key="#com.intellij.ide.util.MemberChooser/0.0.1600.869@0.0.1600.869" timestamp="1580056665883" />
+    <state x="1040" y="159" width="378" height="575" key="#com.intellij.ide.util.MemberChooser/0.0.1600.869@0.0.1600.869" timestamp="1580071220781" />
     <state x="583" y="193" width="428" height="484" key="FileChooserDialogImpl" timestamp="1579519270046">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
     <state x="583" y="193" width="428" height="484" key="FileChooserDialogImpl/0.0.1600.869@0.0.1600.869" timestamp="1579519270046" />
-    <state width="914" height="225" key="GridCell.Tab.0.bottom" timestamp="1580070308748">
+    <state width="914" height="224" key="GridCell.Tab.0.bottom" timestamp="1580073366471">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="914" height="225" key="GridCell.Tab.0.bottom/0.0.1600.869@0.0.1600.869" timestamp="1580070308748" />
-    <state width="914" height="225" key="GridCell.Tab.0.center" timestamp="1580070308747">
+    <state width="914" height="224" key="GridCell.Tab.0.bottom/0.0.1600.869@0.0.1600.869" timestamp="1580073366471" />
+    <state width="914" height="224" key="GridCell.Tab.0.center" timestamp="1580073366471">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="914" height="225" key="GridCell.Tab.0.center/0.0.1600.869@0.0.1600.869" timestamp="1580070308747" />
-    <state width="914" height="225" key="GridCell.Tab.0.left" timestamp="1580070308747">
+    <state width="914" height="224" key="GridCell.Tab.0.center/0.0.1600.869@0.0.1600.869" timestamp="1580073366471" />
+    <state width="914" height="224" key="GridCell.Tab.0.left" timestamp="1580073366470">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="914" height="225" key="GridCell.Tab.0.left/0.0.1600.869@0.0.1600.869" timestamp="1580070308747" />
-    <state width="914" height="225" key="GridCell.Tab.0.right" timestamp="1580070308747">
+    <state width="914" height="224" key="GridCell.Tab.0.left/0.0.1600.869@0.0.1600.869" timestamp="1580073366470" />
+    <state width="914" height="224" key="GridCell.Tab.0.right" timestamp="1580073366471">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="914" height="225" key="GridCell.Tab.0.right/0.0.1600.869@0.0.1600.869" timestamp="1580070308747" />
+    <state width="914" height="224" key="GridCell.Tab.0.right/0.0.1600.869@0.0.1600.869" timestamp="1580073366471" />
     <state x="105" y="88" key="SettingsEditor" timestamp="1580063717348">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
