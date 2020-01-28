@@ -2,13 +2,11 @@ package ru.serioussem.game;
 
 import ru.serioussem.IO.Input;
 import ru.serioussem.display.Display;
-import ru.serioussem.graphics.Sprite;
-import ru.serioussem.graphics.SpriteSheet;
+import ru.serioussem.game.level.Level;
 import ru.serioussem.graphics.TextureAtlas;
 import ru.serioussem.utils.Time;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
 
 public class Game implements Runnable {
 
@@ -29,6 +27,7 @@ public class Game implements Runnable {
     private Input input;
     private TextureAtlas atlas;
     private Player player;
+    private Level level;
 
     public Game() {
         running = false;
@@ -37,7 +36,8 @@ public class Game implements Runnable {
         input = new Input();
         Display.addInputListener(input);
         atlas = new TextureAtlas(ATLAS_FILE_NAME);
-        player = new Player(300,300,5,3,atlas);
+        player = new Player(300, 300, 2, 3, atlas);
+        level = new Level(atlas);
     }
 
     public synchronized void start() {
@@ -65,11 +65,14 @@ public class Game implements Runnable {
 
     private void update() {
         player.update(input);
+        level.update();
     }
 
     private void render() {
         Display.clear();
+        level.render(graphics);
         player.render(graphics);
+        level.renderGrass(graphics);
         Display.swapBuffers();
     }
 

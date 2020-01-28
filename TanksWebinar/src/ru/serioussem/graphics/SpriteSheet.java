@@ -22,6 +22,6 @@ public class SpriteSheet {
         int x = index % spritesInWidth * scale;
         int y = index / spritesInWidth * scale;
 
-        return sheet.getSubimage(x,y,scale,scale);
+        return sheet.getSubimage(x, y, scale, scale);
     }
 }

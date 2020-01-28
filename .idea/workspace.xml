@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3d398be-c9eb-4633-abed-96ba760270e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/EntityType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TanksWebinar/res/level.lvl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/level/Level.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/level/Tile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/level/TileType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/utils/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/graphics/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/graphics/Sprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/graphics/SpriteSheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/graphics/SpriteSheet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,13 +21,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/level/Tile.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1We5xA5G3fUBXKnRXziCJNV90Gs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -39,6 +47,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="inlay.hints.JAVA" />
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -128,6 +137,14 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="395" y="97" width="804" height="677" key="#Inspections" timestamp="1580101775828">
+      <screen x="0" y="0" width="1600" height="869" />
+    </state>
+    <state x="395" y="97" width="804" height="677" key="#Inspections/0.0.1600.869@0.0.1600.869" timestamp="1580101775828" />
+    <state x="856" y="252" width="482" height="389" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580225095166">
+      <screen x="0" y="0" width="1600" height="869" />
+    </state>
+    <state x="856" y="252" width="482" height="389" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.869@0.0.1600.869" timestamp="1580225095166" />
     <state x="1040" y="159" width="378" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1580071220781">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
@@ -136,22 +153,22 @@
       <screen x="0" y="0" width="1600" height="869" />
     </state>
     <state x="583" y="193" width="428" height="484" key="FileChooserDialogImpl/0.0.1600.869@0.0.1600.869" timestamp="1579519270046" />
-    <state width="914" height="224" key="GridCell.Tab.0.bottom" timestamp="1580073366471">
+    <state width="908" height="60" key="GridCell.Tab.0.bottom" timestamp="1580229291289">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="914" height="224" key="GridCell.Tab.0.bottom/0.0.1600.869@0.0.1600.869" timestamp="1580073366471" />
-    <state width="914" height="224" key="GridCell.Tab.0.center" timestamp="1580073366471">
+    <state width="908" height="60" key="GridCell.Tab.0.bottom/0.0.1600.869@0.0.1600.869" timestamp="1580229291289" />
+    <state width="908" height="60" key="GridCell.Tab.0.center" timestamp="1580229291288">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="914" height="224" key="GridCell.Tab.0.center/0.0.1600.869@0.0.1600.869" timestamp="1580073366471" />
-    <state width="914" height="224" key="GridCell.Tab.0.left" timestamp="1580073366470">
+    <state width="908" height="60" key="GridCell.Tab.0.center/0.0.1600.869@0.0.1600.869" timestamp="1580229291288" />
+    <state width="908" height="60" key="GridCell.Tab.0.left" timestamp="1580229291287">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="914" height="224" key="GridCell.Tab.0.left/0.0.1600.869@0.0.1600.869" timestamp="1580073366470" />
-    <state width="914" height="224" key="GridCell.Tab.0.right" timestamp="1580073366471">
+    <state width="908" height="60" key="GridCell.Tab.0.left/0.0.1600.869@0.0.1600.869" timestamp="1580229291287" />
+    <state width="908" height="60" key="GridCell.Tab.0.right" timestamp="1580229291289">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="914" height="224" key="GridCell.Tab.0.right/0.0.1600.869@0.0.1600.869" timestamp="1580073366471" />
+    <state width="908" height="60" key="GridCell.Tab.0.right/0.0.1600.869@0.0.1600.869" timestamp="1580229291289" />
     <state x="105" y="88" key="SettingsEditor" timestamp="1580063717348">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
@@ -160,10 +177,10 @@
       <screen x="0" y="0" width="1600" height="869" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1600.869@0.0.1600.869" timestamp="1580057646747" />
-    <state x="493" y="263" key="com.intellij.ide.util.TipDialog" timestamp="1580052071446">
+    <state x="493" y="263" key="com.intellij.ide.util.TipDialog" timestamp="1580101842593">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state x="493" y="263" key="com.intellij.ide.util.TipDialog/0.0.1600.869@0.0.1600.869" timestamp="1580052071446" />
+    <state x="493" y="263" key="com.intellij.ide.util.TipDialog/0.0.1600.869@0.0.1600.869" timestamp="1580101842593" />
     <state x="605" y="355" width="384" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580068591200">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
