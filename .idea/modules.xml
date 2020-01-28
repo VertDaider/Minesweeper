@@ -10,7 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/SnakeWebinar/SnakeWebinar.iml" filepath="$PROJECT_DIR$/SnakeWebinar/SnakeWebinar.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpaceInvaders/SpaceInvaders.iml" filepath="$PROJECT_DIR$/SpaceInvaders/SpaceInvaders.iml" />
       <module fileurl="file://$PROJECT_DIR$/TanksWebinar/TanksWebinar.iml" filepath="$PROJECT_DIR$/TanksWebinar/TanksWebinar.iml" />
-      <module fileurl="file://$PROJECT_DIR$/TetrisWebinar/TetrisWebinar.iml" filepath="$PROJECT_DIR$/TetrisWebinar/TetrisWebinar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tetris2D/Tetris2D.iml" filepath="$PROJECT_DIR$/Tetris2D/Tetris2D.iml" />
       <module fileurl="file://$PROJECT_DIR$/TicTacToe3D/TicTacToe3D.iml" filepath="$PROJECT_DIR$/TicTacToe3D/TicTacToe3D.iml" />
     </modules>
   </component>

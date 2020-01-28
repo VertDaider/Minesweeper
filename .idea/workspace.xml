@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3d398be-c9eb-4633-abed-96ba760270e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TanksWebinar/res/level.lvl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/level/Level.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/level/Tile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/level/TileType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/utils/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tetris2D/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tetris2D/src/main/java/model/Coord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tetris2D/src/main/java/model/Figure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/graphics/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/graphics/Sprite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/graphics/SpriteSheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/graphics/SpriteSheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TetrisWebinar/TetrisWebinar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris2D/Tetris2D.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TetrisWebinar/src/GameTetris.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -31,6 +30,13 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/level/Tile.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1We5xA5G3fUBXKnRXziCJNV90Gs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -49,6 +55,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="inlay.hints.JAVA" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="model" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="GameOfLife" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -145,30 +156,30 @@
       <screen x="0" y="0" width="1600" height="869" />
     </state>
     <state x="856" y="252" width="482" height="389" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.869@0.0.1600.869" timestamp="1580225095166" />
-    <state x="1040" y="159" width="378" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1580071220781">
+    <state x="1040" y="159" width="378" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1580231352837">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state x="1040" y="159" width="378" height="575" key="#com.intellij.ide.util.MemberChooser/0.0.1600.869@0.0.1600.869" timestamp="1580071220781" />
+    <state x="1040" y="159" width="378" height="575" key="#com.intellij.ide.util.MemberChooser/0.0.1600.869@0.0.1600.869" timestamp="1580231352837" />
     <state x="583" y="193" width="428" height="484" key="FileChooserDialogImpl" timestamp="1579519270046">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
     <state x="583" y="193" width="428" height="484" key="FileChooserDialogImpl/0.0.1600.869@0.0.1600.869" timestamp="1579519270046" />
-    <state width="908" height="60" key="GridCell.Tab.0.bottom" timestamp="1580229291289">
+    <state width="1554" height="178" key="GridCell.Tab.0.bottom" timestamp="1580229854410">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="908" height="60" key="GridCell.Tab.0.bottom/0.0.1600.869@0.0.1600.869" timestamp="1580229291289" />
-    <state width="908" height="60" key="GridCell.Tab.0.center" timestamp="1580229291288">
+    <state width="1554" height="178" key="GridCell.Tab.0.bottom/0.0.1600.869@0.0.1600.869" timestamp="1580229854410" />
+    <state width="1554" height="178" key="GridCell.Tab.0.center" timestamp="1580229854408">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="908" height="60" key="GridCell.Tab.0.center/0.0.1600.869@0.0.1600.869" timestamp="1580229291288" />
-    <state width="908" height="60" key="GridCell.Tab.0.left" timestamp="1580229291287">
+    <state width="1554" height="178" key="GridCell.Tab.0.center/0.0.1600.869@0.0.1600.869" timestamp="1580229854408" />
+    <state width="1554" height="178" key="GridCell.Tab.0.left" timestamp="1580229854407">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="908" height="60" key="GridCell.Tab.0.left/0.0.1600.869@0.0.1600.869" timestamp="1580229291287" />
-    <state width="908" height="60" key="GridCell.Tab.0.right" timestamp="1580229291289">
+    <state width="1554" height="178" key="GridCell.Tab.0.left/0.0.1600.869@0.0.1600.869" timestamp="1580229854407" />
+    <state width="1554" height="178" key="GridCell.Tab.0.right" timestamp="1580229854409">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="908" height="60" key="GridCell.Tab.0.right/0.0.1600.869@0.0.1600.869" timestamp="1580229291289" />
+    <state width="1554" height="178" key="GridCell.Tab.0.right/0.0.1600.869@0.0.1600.869" timestamp="1580229854409" />
     <state x="105" y="88" key="SettingsEditor" timestamp="1580063717348">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
@@ -189,9 +200,9 @@
       <screen x="0" y="0" width="1600" height="869" />
     </state>
     <state x="486" y="45" width="628" height="780" key="find.popup/0.0.1600.869@0.0.1600.869" timestamp="1579498024174" />
-    <state x="175" y="48" width="1243" height="775" key="new project wizard" timestamp="1579709481317">
+    <state x="175" y="48" width="1243" height="775" key="new project wizard" timestamp="1580230954350">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state x="175" y="48" width="1243" height="775" key="new project wizard/0.0.1600.869@0.0.1600.869" timestamp="1579709481317" />
+    <state x="175" y="48" width="1243" height="775" key="new project wizard/0.0.1600.869@0.0.1600.869" timestamp="1580230954350" />
   </component>
 </project>
