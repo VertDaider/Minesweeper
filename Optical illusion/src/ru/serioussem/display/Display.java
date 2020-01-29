@@ -50,7 +50,7 @@ public abstract class Display {
     }
 
 
-    private static float delta = 1.3f;            //white
+    private static float delta8 = 1.3f;            //white
     private static float delta7 = 1.75f;       //orange
     private static float delta5 = -1.0f;        //green
     private static float delta6 = -0.5f;       //magenta
@@ -58,6 +58,7 @@ public abstract class Display {
     private static float delta2 = 0.3f;       //yellow
     private static float delta4 = 0.6f;        //gray
     private static float delta3 = 1f;            //cyan
+    private static Color color = Color.WHITE;
 
     private static int getStartX(int radius) {
         return (width - radius) / 2;
@@ -67,58 +68,72 @@ public abstract class Display {
         return (height - radius) / 2;
     }
 
+    public static void update() {
+        delta8 += 0.02f;
+        delta7 += 0.02f;
+        delta5 += 0.02f;
+        delta1 += 0.02f;
+        delta6 += 0.02f;
+        delta2 += 0.02f;
+        delta4 += 0.02f;
+        delta3 += 0.02f;
+    }
+
     public static void render() {
         paintBigOval();
         paintSmallOvals();
+        update();
     }
 
     private static void paintSmallOvals() {
-        bufferGraphics.setColor(Color.WHITE);
         int radiusSmall = 50;
-        bufferGraphics.fillOval((int) (getStartX(radiusSmall) + (Math.sin(delta) * (300 - radiusSmall / 2))),
+        bufferGraphics.setColor(color);
+        bufferGraphics.fillOval((int) (getStartX(radiusSmall) + (Math.sin(delta8) * (300 - radiusSmall / 2))),
                 getStartY(radiusSmall), radiusSmall, radiusSmall);
-        delta += 0.02f;
 
-        bufferGraphics.setColor(Color.ORANGE);
+        bufferGraphics.setColor(color);
         bufferGraphics.fillOval((int) (getStartX(radiusSmall) + (Math.sin(delta7) * 246)),
                 (int) (getStartY(radiusSmall) + (Math.sin(delta7) * 246) / -2), radiusSmall, radiusSmall);
-        delta7 += 0.02f;
 
-        bufferGraphics.setColor(Color.GREEN);
+        bufferGraphics.setColor(color);
         bufferGraphics.fillOval((int) (getStartX(radiusSmall) + (- Math.sin(delta5) * 195)),
                 (int) (getStartY(radiusSmall) + (Math.sin(delta5) * 195)), radiusSmall, radiusSmall);
-        delta5 += 0.02f;
 
-        bufferGraphics.setColor(Color.MAGENTA);
+
+        bufferGraphics.setColor(color);
         bufferGraphics.fillOval((int) (getStartX(radiusSmall) + (Math.sin(delta6) * 246) / -2),
                 (int) (getStartY(radiusSmall) + (Math.sin(delta6) * 246)), radiusSmall, radiusSmall);
-        delta6 += 0.02f;
 
-        bufferGraphics.setColor(Color.BLUE);
+
+        bufferGraphics.setColor(color);
         bufferGraphics.fillOval(getStartX(radiusSmall),
                 (int) (getStartY(radiusSmall) + (Math.sin(delta1) * (300 - radiusSmall / 2))), radiusSmall, radiusSmall);
-        delta1 += 0.02f;
 
-        bufferGraphics.setColor(Color.YELLOW);
+
+        bufferGraphics.setColor(color);
         bufferGraphics.fillOval((int) (getStartX(radiusSmall) + (Math.sin(delta2) * 246) / 2),
                 (int) (getStartY(radiusSmall) + (Math.sin(delta2) * 246)), radiusSmall, radiusSmall);
-        delta2 += 0.02f;
 
-        bufferGraphics.setColor(Color.GRAY);
+
+        bufferGraphics.setColor(color);
         bufferGraphics.fillOval((int) (getStartX(radiusSmall) + (Math.sin(delta4) * 195)),
                 (int) (getStartY(radiusSmall) + (Math.sin(delta4) * 195)), radiusSmall, radiusSmall);
-        delta4 += 0.02f;
 
-        bufferGraphics.setColor(Color.CYAN);
+
+        bufferGraphics.setColor(color);
         bufferGraphics.fillOval((int) (getStartX(radiusSmall) + (Math.sin(delta3) * 246)),
                 (int) (getStartY(radiusSmall) + (Math.sin(delta3) * 246) / 2), radiusSmall, radiusSmall);
-        delta3 += 0.02f;
+
     }
 
     public static void paintBigOval() {
         bufferGraphics.setColor(Color.RED);
         int radiusBig = 600;
         bufferGraphics.fillOval(getStartX(radiusBig), getStartY(radiusBig), radiusBig, radiusBig);
+    }
+
+    public static float getDelta(float delta) {
+        return 0;
     }
 
 

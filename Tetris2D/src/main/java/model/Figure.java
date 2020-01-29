@@ -70,13 +70,37 @@ public enum Figure {
             1, 1,    2, 1,
             1, 2);
 
-    private List<Coord> dot;
+    public final List<Coord> dots;
+    public final Coord top;
+    public final Coord bot;
 
     Figure(int... coords) {
-        dot = new ArrayList<Coord>();
+        dots = new ArrayList<Coord>();
         for (int j = 0; j < coords.length; j += 2) {
-            dot.add(new Coord(coords[j], coords[j + 1]));
+            dots.add(new Coord(coords[j], coords[j + 1]));
         }
+        top = setTop();
+        bot = setBot();
+    }
+
+    private Coord setTop() {
+        int x = dots.get(0).x;
+        int y = dots.get(0).y;
+        for (Coord coord : dots) {
+            if (x > coord.x) x = coord.x;
+            if (y > coord.y) y = coord.y;
+        }
+        return new Coord(x,y);
+    }
+
+    private Coord setBot() {
+        int x = dots.get(0).x;
+        int y = dots.get(0).y;
+        for (Coord coord : dots) {
+            if (x < coord.x) x = coord.x;
+            if (y < coord.y) y = coord.y;
+        }
+        return new Coord(x,y);
     }
 
     public Figure turnLeft(){
@@ -112,4 +136,7 @@ public enum Figure {
         }
     }
 
+    public static Figure getRandom() {
+        return Figure.values()[(int)(Math.random() * Figure.values().length)];
+    }
 }
