@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3d398be-c9eb-4633-abed-96ba760270e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Tetris2D/src/main/java/Tetris.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tetris2D/src/main/java/ui/Box.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tetris2D/src/main/java/ui/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tetris2D/src/main/java/model/Mapable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tetris2D/src/main/java/service/FlyFigure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Optical illusion/src/ru/serioussem/display/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/Optical illusion/src/ru/serioussem/display/Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Life/Life.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Life/Life.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tetris2D/Tetris2D.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris2D/Tetris2D.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tetris2D/src/main/java/model/Coord.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris2D/src/main/java/model/Coord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tetris2D/src/main/java/model/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris2D/src/main/java/model/Figure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tetris2D/src/main/java/ui/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris2D/src/main/java/ui/Box.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tetris2D/src/main/java/ui/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris2D/src/main/java/ui/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tetris2D/src/main/java/ui/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris2D/src/main/java/ui/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +26,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -57,7 +58,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../StateCalculator" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2816092" />
@@ -68,14 +69,7 @@
       <recent name="model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
-    <configuration name="GameOfLife" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GameOfLife" />
-      <module name="Life" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Tetris">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.serioussem.main.Main" />
       <module name="Optical illusion" />
@@ -122,13 +116,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tetris" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Tetris" />
+      <module name="Tetris2D" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Tetris" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.SpaceInvaders" />
         <item itemvalue="Application.MainWindow" />
         <item itemvalue="Application.Main (2)" />
-        <item itemvalue="Application.GameOfLife" />
       </list>
     </recent_temporary>
   </component>
@@ -165,46 +166,50 @@
       <screen x="0" y="0" width="1600" height="869" />
     </state>
     <state x="395" y="97" width="804" height="677" key="#Inspections/0.0.1600.869@0.0.1600.869" timestamp="1580101775828" />
+    <state x="395" y="97" width="804" height="677" key="#Plugins" timestamp="1581053324528">
+      <screen x="0" y="0" width="1600" height="869" />
+    </state>
+    <state x="395" y="97" width="804" height="677" key="#Plugins/0.0.1600.869@0.0.1600.869" timestamp="1581053324528" />
     <state x="856" y="252" width="482" height="389" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580225095166">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
     <state x="856" y="252" width="482" height="389" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.869@0.0.1600.869" timestamp="1580225095166" />
-    <state x="1040" y="159" width="378" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1580275989595">
+    <state x="1040" y="159" width="378" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1580393550246">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state x="1040" y="159" width="378" height="575" key="#com.intellij.ide.util.MemberChooser/0.0.1600.869@0.0.1600.869" timestamp="1580275989595" />
-    <state x="583" y="193" width="428" height="484" key="FileChooserDialogImpl" timestamp="1580274657116">
+    <state x="1040" y="159" width="378" height="575" key="#com.intellij.ide.util.MemberChooser/0.0.1600.869@0.0.1600.869" timestamp="1580393550246" />
+    <state x="583" y="193" width="428" height="484" key="FileChooserDialogImpl" timestamp="1582476784431">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state x="583" y="193" width="428" height="484" key="FileChooserDialogImpl/0.0.1600.869@0.0.1600.869" timestamp="1580274657116" />
-    <state width="1554" height="60" key="GridCell.Tab.0.bottom" timestamp="1580303865444">
+    <state x="583" y="193" width="428" height="484" key="FileChooserDialogImpl/0.0.1600.869@0.0.1600.869" timestamp="1582476784431" />
+    <state width="954" height="94" key="GridCell.Tab.0.bottom" timestamp="1581083833193">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="1554" height="60" key="GridCell.Tab.0.bottom/0.0.1600.869@0.0.1600.869" timestamp="1580303865444" />
-    <state width="1554" height="60" key="GridCell.Tab.0.center" timestamp="1580303865443">
+    <state width="954" height="94" key="GridCell.Tab.0.bottom/0.0.1600.869@0.0.1600.869" timestamp="1581083833193" />
+    <state width="954" height="94" key="GridCell.Tab.0.center" timestamp="1581083833193">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="1554" height="60" key="GridCell.Tab.0.center/0.0.1600.869@0.0.1600.869" timestamp="1580303865443" />
-    <state width="1554" height="60" key="GridCell.Tab.0.left" timestamp="1580303865443">
+    <state width="954" height="94" key="GridCell.Tab.0.center/0.0.1600.869@0.0.1600.869" timestamp="1581083833193" />
+    <state width="954" height="94" key="GridCell.Tab.0.left" timestamp="1581083833193">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="1554" height="60" key="GridCell.Tab.0.left/0.0.1600.869@0.0.1600.869" timestamp="1580303865443" />
-    <state width="1554" height="60" key="GridCell.Tab.0.right" timestamp="1580303865444">
+    <state width="954" height="94" key="GridCell.Tab.0.left/0.0.1600.869@0.0.1600.869" timestamp="1581083833193" />
+    <state width="954" height="94" key="GridCell.Tab.0.right" timestamp="1581083833193">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state width="1554" height="60" key="GridCell.Tab.0.right/0.0.1600.869@0.0.1600.869" timestamp="1580303865444" />
-    <state x="105" y="24" width="1028" height="845" key="SettingsEditor" timestamp="1580274720094">
+    <state width="954" height="94" key="GridCell.Tab.0.right/0.0.1600.869@0.0.1600.869" timestamp="1581083833193" />
+    <state x="105" y="24" width="1028" height="845" key="SettingsEditor" timestamp="1581053276247">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state x="105" y="24" width="1028" height="845" key="SettingsEditor/0.0.1600.869@0.0.1600.869" timestamp="1580274720094" />
+    <state x="105" y="24" width="1028" height="845" key="SettingsEditor/0.0.1600.869@0.0.1600.869" timestamp="1581053276247" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1580057646747">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1600.869@0.0.1600.869" timestamp="1580057646747" />
-    <state x="493" y="263" key="com.intellij.ide.util.TipDialog" timestamp="1580101842593">
+    <state x="493" y="263" key="com.intellij.ide.util.TipDialog" timestamp="1582475381360">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state x="493" y="263" key="com.intellij.ide.util.TipDialog/0.0.1600.869@0.0.1600.869" timestamp="1580101842593" />
+    <state x="493" y="263" key="com.intellij.ide.util.TipDialog/0.0.1600.869@0.0.1600.869" timestamp="1582475381360" />
     <state x="605" y="355" width="384" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580068591200">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
@@ -213,9 +218,9 @@
       <screen x="0" y="0" width="1600" height="869" />
     </state>
     <state x="486" y="45" width="628" height="780" key="find.popup/0.0.1600.869@0.0.1600.869" timestamp="1579498024174" />
-    <state x="175" y="48" width="1243" height="775" key="new project wizard" timestamp="1580230954350">
+    <state x="175" y="48" width="1243" height="775" key="new project wizard" timestamp="1582476806650">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
-    <state x="175" y="48" width="1243" height="775" key="new project wizard/0.0.1600.869@0.0.1600.869" timestamp="1580230954350" />
+    <state x="175" y="48" width="1243" height="775" key="new project wizard/0.0.1600.869@0.0.1600.869" timestamp="1582476806650" />
   </component>
 </project>

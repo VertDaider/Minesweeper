@@ -1,29 +1,38 @@
 package ui;
 
 import model.Coord;
-import model.Figure;
+import model.Mapable;
+import service.FlyFigure;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class Window extends JFrame implements Runnable {
+public class Window extends JFrame implements Runnable, Mapable {
     private Box[][] boxes;
-    private Figure figure;
-    private Coord coord;
+    private FlyFigure fly;
 
     public Window() {
         boxes = new Box[Config.WIDTH][Config.HEIGHT];
         initForm();
         initBoxes();
         addKeyListener(new KeyAdapter());
+        TimeAdapter time = new TimeAdapter();
+        Timer timer = new Timer(200, time);
+        timer.start();
 
     }
 
     public void addFigure() {
-        figure = Figure.getRandom();
-        coord = new Coord(5, 5);
-        showFigure();
+        fly = new FlyFigure(this);
+        if (fly.canPlaceFigure()) {
+            showFigure();
+        } else {
+            setVisible(false);
+            dispose();
+        }
     }
 
     private void initForm() {
@@ -51,16 +60,16 @@ public class Window extends JFrame implements Runnable {
     }
 
     private void showFigure() {
-        showFigure(figure, coord, 1);
+        showFigure(1);
     }
 
     private void hideFigure() {
-        showFigure(figure, coord, 0);
+        showFigure(0);
     }
 
-    private void showFigure(Figure figure, Coord at, int color) {
-        for (Coord dot : figure.dots) {
-            setBoxColor(at.x + dot.x, at.y + dot.y, color);
+    private void showFigure(int color) {
+        for (Coord dot : fly.getFigure().dots) {
+            setBoxColor(fly.getCoord().x + dot.x, fly.getCoord().y + dot.y, color);
         }
     }
 
@@ -70,18 +79,22 @@ public class Window extends JFrame implements Runnable {
         boxes[x][y].setColor(color);
     }
 
-    private boolean canMoveFigure(int sx, int sy) {
-        if(coord.x + sx + figure.top.x < 0) return false;
-        if (coord.x + sx + figure.bot.x >= Config.WIDTH) return false;
-        if (coord.y + sy + figure.top.y < 0) return false;
-        if (coord.y + sy + figure.bot.y >= Config.HEIGHT) return false;
-        return true;
+    public int getBoxColor(int x, int y) {
+        if (x < 0 || x >= Config.WIDTH) return -1;
+        if (y < 0 || y >= Config.HEIGHT) return -1;
+        return boxes[x][y].getColor();
     }
 
-    private void moveFigure(int sx, int sy) {
-        if (canMoveFigure(sx, sy)) {
-            coord = coord.plus(sx, sy);
-        }
+    private void moveFly(int sx, int sy) {
+        hideFigure();
+        fly.moveFigure(sx, sy);
+        showFigure();
+    }
+
+    private void turnFly() {
+        hideFigure();
+        fly.turnFigure();
+        showFigure();
     }
 
     class KeyAdapter implements KeyListener {
@@ -92,22 +105,22 @@ public class Window extends JFrame implements Runnable {
 
         @Override
         public void keyPressed(KeyEvent keyEvent) {
-            hideFigure();
+
             switch (keyEvent.getKeyCode()) {
                 case KeyEvent.VK_UP:
-                    moveFigure(0, -1);
+                    turnFly();
                     break;
                 case KeyEvent.VK_LEFT:
-                    moveFigure(-1, 0);
+                    moveFly(-1, 0);
                     break;
                 case KeyEvent.VK_RIGHT:
-                    moveFigure(+1, 0);
+                    moveFly(+1, 0);
                     break;
                 case KeyEvent.VK_DOWN:
-                    moveFigure(0, +1);
+                    moveFly(0, +1);
                     break;
             }
-            showFigure();
+
         }
 
         @Override
@@ -115,4 +128,42 @@ public class Window extends JFrame implements Runnable {
 
         }
     }
+
+    private void stripLines() {
+        for (int y = Config.HEIGHT - 1; y >= 0; y--) {
+            while (isFullLine(y)) {
+                dropLine(y);
+            }
+        }
+    }
+
+    private void dropLine(int y) {
+        for (int my = y - 1; my >= 0; my--)
+            for (int x = 0; x < Config.WIDTH; x++)
+                setBoxColor(x, my + 1, getBoxColor(x, my));
+        for (int x = 0; x < Config.WIDTH; x++)
+            setBoxColor(x, 0, 0);
+    }
+
+    private boolean isFullLine(int y) {
+        for (int x = 0; x < Config.WIDTH; x++) {
+            if (getBoxColor(x, y) != 2)
+                return false;
+        }
+        return true;
+    }
+
+    class TimeAdapter implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            moveFly(0, 1);
+            if (fly.isLanded()) {
+                showFigure(2);
+                stripLines();
+                addFigure();
+            }
+        }
+    }
+
 }

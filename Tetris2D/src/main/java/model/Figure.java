@@ -34,7 +34,7 @@ public enum Figure {
 
     L3(0, 0,    1, 0,
                          1, 1,
-                         2, 1),
+                         1, 2),
 
     L4(             2, 0,
             0, 1,   1, 1,    2, 1),
@@ -60,7 +60,7 @@ public enum Figure {
             0, 1,    1, 1,   2, 1),
 
     T4(     1, 0,
-                    0, 1,    2, 1,
+                    0, 1,    1, 1,
                     1, 2),
 
     Z1 (0, 1,   1, 1,
@@ -137,6 +137,27 @@ public enum Figure {
     }
 
     public static Figure getRandom() {
-        return Figure.values()[(int)(Math.random() * Figure.values().length)];
+        switch ((int) (Math.random() * 19)) {
+            case 1: return I1;
+            case 2: return I2;
+            case 3: return J1;
+            case 4: return J2;
+            case 5: return J3;
+            case 6: return J4;
+            case 7: return L1;
+            case 8: return L2;
+            case 9: return L3;
+            case 10: return L4;
+            case 11: return O;
+            case 12: return S1;
+            case 13: return S2;
+            case 14: return T1;
+            case 15: return T2;
+            case 16: return T3;
+            case 17: return T4;
+            case 18: return Z1;
+            case 19:
+            default:return Z2;
+        }
     }
 }
