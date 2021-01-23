@@ -21,7 +21,8 @@ public class Main extends Application {
     private static final int width = 1000;
     private static final int height = 900;
     private static final int bigRadius = 400;
-    private static final int smallRadius = 50;
+    private static final int smallRadius = 25;
+    private static final Duration duration = Duration.seconds(5.0);
 
     public static void main(String[] args) {
         Application.launch(args);
@@ -43,7 +44,7 @@ public class Main extends Application {
         stage.show();
     }
 
-    private Line rotateLine(Line line, int angleDegree, double x, double y) {
+    private Line rotateLine(Line line, double angleDegree, double x, double y) {
         Line newLine = new Line();
         double angle = Math.toRadians(angleDegree);
 
@@ -53,6 +54,30 @@ public class Main extends Application {
         newLine.setEndY(((line.getEndX() - x) * Math.sin(angle)) + ((line.getEndY() - y) * Math.cos(angle)) + y);
 
         return newLine;
+    }
+
+    private Circle createAnimation(Line line, double angle) {
+        Circle circle = new Circle(smallRadius, Color.WHITE);
+        circle.setSmooth(true);
+
+        Line newLine = line;
+        if (angle != 0) {
+            newLine = rotateLine(line, angle, (double) width / 2, (double) height / 2);
+        }
+        Path p1 = new Path(
+                new MoveTo(newLine.getStartX(), newLine.getStartY()),
+                new LineTo(newLine.getEndX(), newLine.getEndY())
+        );
+
+        PathTransition tr = new PathTransition(
+                duration, p1, circle);
+        tr.setAutoReverse(true);
+        tr.setCycleCount(Animation.INDEFINITE);
+//        tr.setInterpolator(Interpolator.SPLINE(0.5, 0.5, 1.0, 1.0));
+        tr.setInterpolator(Interpolator.EASE_BOTH);
+        tr.playFrom(duration.multiply(angle).divide(180));
+
+        return circle;
     }
 
     public void newWindow() {
@@ -67,44 +92,17 @@ public class Main extends Application {
         line.setStartY(bigCircle.getCenterY());
         line.setEndX(bigCircle.getCenterX() + bigRadius - smallRadius);
         line.setEndY(bigCircle.getCenterY());
-        line.setStroke(Color.WHITE);
-        System.out.println(line.getStartX() + " " + line.getStartY());
-        System.out.println(line.getEndX() + " " + line.getEndY());
 
-        Circle circle1 = new Circle(smallRadius, Color.WHITE);
-        circle1.setSmooth(true);
+        Circle circle1 = createAnimation(line, 0);
+        Circle circle2 = createAnimation(line, 22.5);
+        Circle circle3 = createAnimation(line, 45);
+        Circle circle4 = createAnimation(line, 67.5);
+        Circle circle5 = createAnimation(line, 90);
+        Circle circle6 = createAnimation(line, 112.5);
+        Circle circle7 = createAnimation(line, 135);
+        Circle circle8 = createAnimation(line, 157.5);
 
-        Path p1 = new Path(
-                new MoveTo(line.getStartX(), line.getStartY()),
-                new LineTo(line.getEndX(), line.getEndY())
-        );
-
-        PathTransition tr = new PathTransition(
-                Duration.seconds(5.0), p1, circle1);
-        tr.setAutoReverse(true);
-        tr.setCycleCount(Animation.INDEFINITE);
-        tr.setInterpolator(Interpolator.LINEAR);
-        tr.play();
-
-        Line line2 = rotateLine(line,90, bigCircle.getCenterX(), bigCircle.getCenterY());
-        Line line3 = rotateLine(line,45, bigCircle.getCenterX(), bigCircle.getCenterY());
-
-        Circle circle2 = new Circle(smallRadius, Color.WHITE);
-        circle2.setSmooth(true);
-
-        Path p2 = new Path(
-                new MoveTo(line2.getStartX(), line2.getStartY()),
-                new LineTo(line2.getEndX(), line2.getEndY())
-        );
-
-        PathTransition tr2 = new PathTransition(
-                Duration.seconds(5.0), p2, circle2);
-        tr2.setAutoReverse(true);
-        tr2.setCycleCount(Animation.INDEFINITE);
-        tr2.setInterpolator(Interpolator.LINEAR);
-        tr2.play();
-
-        pane.getChildren().addAll(bigCircle, circle1, circle2);
+        pane.getChildren().addAll(bigCircle, circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle8);
         Scene scene = new Scene(pane, width, height, Color.BLACK);
         pane.setBackground(Background.EMPTY);
         window.setScene(scene);
