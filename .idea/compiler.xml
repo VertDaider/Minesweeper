@@ -10,7 +10,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
-      <module name="Tetris2D" target="11" />
+      <module name="JavaFX" target="11" />
+      <module name="Tetris2D" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

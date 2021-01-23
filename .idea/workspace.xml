@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c3d398be-c9eb-4633-abed-96ba760270e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Tetris2D/src/main/java/model/Mapable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tetris2D/src/main/java/service/FlyFigure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx_swt.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Optical illusion/src/ru/serioussem/javafx/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Life/Life.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Life/Life.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Optical illusion/Optical illusion.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Optical illusion/Optical illusion.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tetris2D/Tetris2D.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris2D/Tetris2D.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tetris2D/src/main/java/model/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris2D/src/main/java/model/Figure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tetris2D/src/main/java/ui/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris2D/src/main/java/ui/Box.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tetris2D/src/main/java/ui/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris2D/src/main/java/ui/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tetris2D/src/main/java/ui/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris2D/src/main/java/ui/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -36,13 +37,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/TanksWebinar/src/ru/serioussem/game/level/Tile.java" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1We5xA5G3fUBXKnRXziCJNV90Gs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -51,64 +45,62 @@
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="/usr/lib/jvm/java-11-openjfx/javafx-src.zip" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2816092" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Tetris">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Circle">
+    <configuration name="Circle" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ru.serioussem.javafx.Main" />
+      <module name="Optical illusion" />
+      <option name="VM_PARAMETERS" value="--module-path /usr/lib/jvm/java-11-openjfx/lib --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.serioussem.javafx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameOfLife" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GameOfLife" />
+      <module name="Life" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="animation.Main" />
+      <module name="JavaFX" />
+      <option name="VM_PARAMETERS" value="--module-path /usr/lib/jvm/java-11-openjfx/lib --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Swing" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="ru.serioussem.main.Main" />
       <module name="Optical illusion" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ru.serioussem.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.serioussem.Main" />
-      <module name="LifeWebinar" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.serioussem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainWindow" />
-      <module name="SnakeWebinar" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SpaceInvaders" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.serioussem.SpaceInvaders" />
-      <module name="SpaceInvaders" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.serioussem.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,13 +115,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.GameOfLife" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Tetris" />
+      <item itemvalue="Application.Circle" />
+      <item itemvalue="Application.Swing" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Circle" />
+        <item itemvalue="Application.Swing" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.GameOfLife" />
         <item itemvalue="Application.Tetris" />
-        <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.SpaceInvaders" />
-        <item itemvalue="Application.MainWindow" />
-        <item itemvalue="Application.Main (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -145,6 +144,7 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -158,69 +158,19 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="395" y="97" width="804" height="677" key="#Inspections" timestamp="1580101775828">
-      <screen x="0" y="0" width="1600" height="869" />
-    </state>
-    <state x="395" y="97" width="804" height="677" key="#Inspections/0.0.1600.869@0.0.1600.869" timestamp="1580101775828" />
-    <state x="395" y="97" width="804" height="677" key="#Plugins" timestamp="1581053324528">
-      <screen x="0" y="0" width="1600" height="869" />
-    </state>
-    <state x="395" y="97" width="804" height="677" key="#Plugins/0.0.1600.869@0.0.1600.869" timestamp="1581053324528" />
-    <state x="856" y="252" width="482" height="389" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580225095166">
-      <screen x="0" y="0" width="1600" height="869" />
-    </state>
-    <state x="856" y="252" width="482" height="389" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.869@0.0.1600.869" timestamp="1580225095166" />
-    <state x="1040" y="159" width="378" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1580393550246">
-      <screen x="0" y="0" width="1600" height="869" />
-    </state>
-    <state x="1040" y="159" width="378" height="575" key="#com.intellij.ide.util.MemberChooser/0.0.1600.869@0.0.1600.869" timestamp="1580393550246" />
-    <state x="583" y="193" width="428" height="484" key="FileChooserDialogImpl" timestamp="1582476784431">
-      <screen x="0" y="0" width="1600" height="869" />
-    </state>
-    <state x="583" y="193" width="428" height="484" key="FileChooserDialogImpl/0.0.1600.869@0.0.1600.869" timestamp="1582476784431" />
-    <state width="954" height="94" key="GridCell.Tab.0.bottom" timestamp="1581083833193">
-      <screen x="0" y="0" width="1600" height="869" />
-    </state>
-    <state width="954" height="94" key="GridCell.Tab.0.bottom/0.0.1600.869@0.0.1600.869" timestamp="1581083833193" />
-    <state width="954" height="94" key="GridCell.Tab.0.center" timestamp="1581083833193">
-      <screen x="0" y="0" width="1600" height="869" />
-    </state>
-    <state width="954" height="94" key="GridCell.Tab.0.center/0.0.1600.869@0.0.1600.869" timestamp="1581083833193" />
-    <state width="954" height="94" key="GridCell.Tab.0.left" timestamp="1581083833193">
-      <screen x="0" y="0" width="1600" height="869" />
-    </state>
-    <state width="954" height="94" key="GridCell.Tab.0.left/0.0.1600.869@0.0.1600.869" timestamp="1581083833193" />
-    <state width="954" height="94" key="GridCell.Tab.0.right" timestamp="1581083833193">
-      <screen x="0" y="0" width="1600" height="869" />
-    </state>
-    <state width="954" height="94" key="GridCell.Tab.0.right/0.0.1600.869@0.0.1600.869" timestamp="1581083833193" />
-    <state x="105" y="24" width="1028" height="845" key="SettingsEditor" timestamp="1581053276247">
-      <screen x="0" y="0" width="1600" height="869" />
-    </state>
-    <state x="105" y="24" width="1028" height="845" key="SettingsEditor/0.0.1600.869@0.0.1600.869" timestamp="1581053276247" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1580057646747">
-      <screen x="0" y="0" width="1600" height="869" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1600.869@0.0.1600.869" timestamp="1580057646747" />
-    <state x="493" y="263" key="com.intellij.ide.util.TipDialog" timestamp="1582475381360">
-      <screen x="0" y="0" width="1600" height="869" />
-    </state>
-    <state x="493" y="263" key="com.intellij.ide.util.TipDialog/0.0.1600.869@0.0.1600.869" timestamp="1582475381360" />
-    <state x="605" y="355" width="384" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580068591200">
-      <screen x="0" y="0" width="1600" height="869" />
-    </state>
-    <state x="605" y="355" width="384" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.869@0.0.1600.869" timestamp="1580068591200" />
-    <state x="486" y="45" width="628" height="780" key="find.popup" timestamp="1579498024174">
-      <screen x="0" y="0" width="1600" height="869" />
-    </state>
-    <state x="486" y="45" width="628" height="780" key="find.popup/0.0.1600.869@0.0.1600.869" timestamp="1579498024174" />
-    <state x="175" y="48" width="1243" height="775" key="new project wizard" timestamp="1582476806650">
-      <screen x="0" y="0" width="1600" height="869" />
-    </state>
-    <state x="175" y="48" width="1243" height="775" key="new project wizard/0.0.1600.869@0.0.1600.869" timestamp="1582476806650" />
   </component>
 </project>
