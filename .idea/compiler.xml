@@ -9,9 +9,6 @@
         <module name="Tetris2D" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11">
-      <module name="JavaFX" target="11" />
-      <module name="Tetris2D" target="1.5" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="11" />
   </component>
 </project>

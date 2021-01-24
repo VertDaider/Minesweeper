@@ -5,14 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3d398be-c9eb-4633-abed-96ba760270e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx_swt.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Optical illusion/src/ru/serioussem/javafx/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BattleShip/BattleShip.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BattleShip/src/Cell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BattleShip/src/GameBattleShip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BattleShip/src/Ship.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BattleShip/src/Ships.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BattleShip/src/Shot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BattleShip/src/Shots.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tetris2D/src/main/java/GameTetris.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Optical illusion/Optical illusion.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Optical illusion/Optical illusion.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tetris2D/Tetris2D.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris2D/Tetris2D.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tetris2D/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tetris2D/src/main/java/Tetris.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tetris2D/src/main/java/model/Coord.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tetris2D/src/main/java/model/Figure.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tetris2D/src/main/java/model/Mapable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tetris2D/src/main/java/service/FlyFigure.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tetris2D/src/main/java/ui/Box.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tetris2D/src/main/java/ui/Config.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tetris2D/src/main/java/ui/Window.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,18 +64,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="/usr/lib/jvm/java-11-openjfx/javafx-src.zip" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BubbleShooter" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2816092" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Circle">
+  <component name="RunManager" selected="Application.GameBattleShip">
     <configuration name="Circle" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="ru.serioussem.javafx.Main" />
       <module name="Optical illusion" />
@@ -78,9 +90,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameOfLife" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GameOfLife" />
-      <module name="Life" />
+    <configuration name="GameBattleShip" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GameBattleShip" />
+      <module name="BattleShip" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameTetris" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GameTetris" />
+      <module name="Tetris2D" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -108,27 +127,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tetris" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Tetris" />
-      <module name="Tetris2D" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.GameOfLife" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.Tetris" />
       <item itemvalue="Application.Circle" />
       <item itemvalue="Application.Swing" />
+      <item itemvalue="Application.GameTetris" />
+      <item itemvalue="Application.GameBattleShip" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GameBattleShip" />
+        <item itemvalue="Application.GameTetris" />
         <item itemvalue="Application.Circle" />
         <item itemvalue="Application.Swing" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.GameOfLife" />
-        <item itemvalue="Application.Tetris" />
       </list>
     </recent_temporary>
   </component>
